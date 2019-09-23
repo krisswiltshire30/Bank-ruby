@@ -1,4 +1,4 @@
-# Bank
+# :bank: Bank :bank:
 A basic repl based bank account
 
 -----
