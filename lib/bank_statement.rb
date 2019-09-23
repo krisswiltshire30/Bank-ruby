@@ -7,10 +7,6 @@ class BankStatement
     @statement = []
   end
 
-  def deposit(amount)
-    @statement.push([Time.now.strftime("%d/%m/%y"),amount, nil,amount])
-  end
-
   def print_statement
     puts 'date || credit || debit || balance'
     @statement.each do |line|
