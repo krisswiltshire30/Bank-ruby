@@ -4,8 +4,8 @@
 class BankAccount
   attr_accessor :statement
 
-  def initialize
-    @statement = []
+  def initialize(statement = [])
+    @statement = statement
   end
 
   def print_statement
