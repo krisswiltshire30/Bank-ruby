@@ -1,0 +1,22 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/Kriss/Desktop/Ruby/projects/Bank/lib/bank_statement.rb": [
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1569249447
+  }
+}
