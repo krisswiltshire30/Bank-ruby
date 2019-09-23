@@ -1,11 +1,56 @@
 # :bank: Bank :bank:
 A basic repl based bank account
-
 -----
-### My process - TODO -
-
+#### Tech used
+- Ruby
+- Rspec
+- Rubocop
+- SimpleCov
+- TimeCop
 -----
-### How to use - TODO -
+### My process
+- I decided to split the acceptance criteria into smaller users stories and tackle from there. 
+- I then wrote some sudo code in IRB and settled on an array of arrays to handle that data.
+- The statement is handled by the bank account class by itterating over the arrays in reverse chronological order, it then puts out the array and joins with the table dividers '||'
+- The deposit and withdrawal class takes the account and amount as arguments and adds this information, as well as the date, as another array within the statement class
+- Both withdrawal and deposit class update the balance whenever a new array is added
+- Finally, all classes are controlled from within the bank class. 
+-----
+### How to use
+1. Clone the repo
+```bash
+$ git clone https://github.com/krisswiltshire30/Bank
+```
+2. Install gems
+```bash
+$ bundle install
+```
+
+*IRB Example*
+```ruby
+> require './lib/bank.rb'
+> bank = Bank.new
+> bank.deposit(500)
+> bank.bank_statement
+> =>
+> date || credit || debit || balance
+> 23/09/19 || 500 ||  || 500
+>
+> bank.deposit(600)
+> bank.bank_statement
+> =>
+> date || credit || debit || balance
+> 23/09/19 || 600 ||  || 1100
+> 23/09/19 || 500 ||  || 500
+>
+> bank.withdraw(400)
+> bank.bank_statement
+> =>
+> date || credit || debit || balance
+> 23/09/19 ||  || 400 || 700
+> 23/09/19 || 600 ||  || 1100
+> 23/09/19 || 500 ||  || 500
+```
 
 ---
 ### Requirements
