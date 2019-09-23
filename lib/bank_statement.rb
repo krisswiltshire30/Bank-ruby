@@ -7,8 +7,12 @@ class BankStatement
     @statement = []
   end
 
+  def deposit(amount)
+    @statement.push([Time.now.strftime("%d/%m/%y"),amount, nil,amount])
+  end
+
   def print_statement
-    @statement.unshift(%w[date credit debit balance]) if @statement == []
+    puts 'date || credit || debit || balance'
     @statement.each do |line|
       puts line.join(' || ')
     end
@@ -16,4 +20,5 @@ class BankStatement
 end
 
 # statement = BankStatement.new
+# statement.deposit(5000)
 # statement.print_statement

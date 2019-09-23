@@ -9,7 +9,7 @@ RSpec.describe BankStatement do
   # I would like to view my bank statement
   describe 'Viewing statement' do
     it 'User should be able to view their bank statement' do
-      expect{ subject.print_statement }.to output("date || credit || debit || balance\n").to_stdout
+      expect { subject.print_statement }.to output("date || credit || debit || balance\n").to_stdout
     end
   end
 end
