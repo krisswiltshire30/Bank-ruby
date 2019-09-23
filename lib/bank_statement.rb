@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Logs requests to deposit and withdraw classes into an array
 class BankStatement
   attr_accessor :statement
 
@@ -14,7 +15,3 @@ class BankStatement
     end
   end
 end
-
-# statement = BankStatement.new
-# statement.deposit(5000)
-# statement.print_statement
