@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'bank_statement'
+require_relative 'bank_account'
 
 # Handles withdrawels from bank account
 class Withdraw

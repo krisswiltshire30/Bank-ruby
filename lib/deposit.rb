@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'bank_statement'
+require_relative 'bank_account'
 
 # Handles deposits to bank account
 class Deposit
