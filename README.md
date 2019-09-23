@@ -54,6 +54,11 @@ As a user
 So that I can spend my money
 I would like to withdraw money from my bank account
 ```
+```
+As a user
+So that I can see my most recent activity
+I would like to see my transactions in reverse chronological order
+```
 ---
 ### Acceptance criteria
 
