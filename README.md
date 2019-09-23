@@ -1,5 +1,7 @@
 # :bank: Bank :bank:
 A basic repl based bank account
+
+### ( [Process](#Process) )
 -----
 #### Tech used
 - Ruby
@@ -8,7 +10,7 @@ A basic repl based bank account
 - SimpleCov
 - TimeCop
 -----
-### My process
+### Process
 - I decided to split the acceptance criteria into smaller users stories and tackle from there. 
 - I then wrote some sudo code in IRB and settled on an array of arrays to handle that data.
 - The statement is handled by the bank account class by itterating over the arrays in reverse chronological order, it then puts out the array and joins with the table dividers '||'
@@ -120,6 +122,18 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 ---
+
+### Domain Model
+|    Classes    |      Methods    |                 Behaviour                     |
+|---------------|-----------------|-----------------------------------------------|
+|*BankAccount*  |print_statement  |puts out all transactions                      |
+|*Deposit*      |make_a_deposit   |- Takes the account and amount as arguments and adds this information, as well as the date, as another array within the statement class. - Updates the balance whenever a new array is added                                               |
+|*Withdraw*     |make_a_withdrawal|- Takes the account and amount as arguments and adds this information, as well as the date, as another array within the statement class. - Updates the balance whenever a new array is added                                               |
+|*Bank*         |                 |Controller for all classes                     |
+|               |deposit          |Calls make_a_deposit                           |
+|               |withdraw         |Calls make_a_withdrawal                        |
+|               |bank_statement   |Calls print_statement                          |
+
 ### Possible edge cases
 
 - User should not be able to withdraw more than the current balance
