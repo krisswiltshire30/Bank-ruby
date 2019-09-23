@@ -1,7 +1,7 @@
 # :bank: Bank :bank:
 A basic repl based bank account
 
-### ( [Process](#Process) )
+### | [Process](#Process) | [How to use](#How_to_use) | [User stories](#User_stories) | [Acceptance criteria](#Acceptance_criteria) | [Domain Model](#Domain_model) |
 -----
 #### Tech used
 - Ruby
@@ -16,7 +16,8 @@ A basic repl based bank account
 - The statement is handled by the bank account class by itterating over the arrays in reverse chronological order, it then puts out the array and joins with the table dividers '||'
 - The deposit and withdrawal class takes the account and amount as arguments and adds this information, as well as the date, as another array within the statement class
 - Both withdrawal and deposit class update the balance whenever a new array is added
-- Finally, all classes are controlled from within the bank class. 
+- Finally, all classes are controlled from within the bank class.
+- See the [Domain Model](#Domain_model) for more info
 -----
 ### How to use
 1. Clone the repo
