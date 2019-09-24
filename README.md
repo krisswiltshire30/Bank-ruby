@@ -34,7 +34,7 @@ A basic repl based bank account
 1. Clone the repo
 
 ```bash
-$ git clone https://github.com/krisswiltshire30/Bank
+$ git clone https://github.com/krisswiltshire30/Bank-ruby
 ```
 
 2. Install gems
