@@ -1,27 +1,27 @@
 # frozen_string_literal: true
 
-require_relative 'bank_account'
+require_relative 'account'
 require_relative 'transaction'
 
 # Bank controller
-class Bank
+class BankAccount
   def initialize
-    @bank_account = BankAccount.new
-    @transaction = Transaction.new
+    @statement = BankStatement.new
+    @transaction = BankTransaction.new
   end
 
   def deposit(amount)
-    @transaction.make_a_deposit(@bank_account, amount)
+    @transaction.make_a_deposit(@statement, amount)
     "£#{amount} deposited into your to account"
   end
-
+  
   def withdraw(amount)
-    @transaction.make_a_withdrawal(@bank_account, amount)
+    @transaction.make_a_withdrawal(@statement, amount)
     "£#{amount} withdrawn from your account"
   end
 
   def bank_statement
-    @bank_account.print_statement
+    @statement.print_statement
     'Statement printed'
   end
 end

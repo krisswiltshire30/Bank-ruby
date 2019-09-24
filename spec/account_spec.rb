@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require './lib/bank.rb'
+require './lib/account.rb'
 
-RSpec.describe Bank do
-  subject { Bank.new }
+RSpec.describe BankAccount do
+  subject { BankAccount.new }
 
   describe 'Deposit' do
     it 'Should return a string containing how much has been deposited' do

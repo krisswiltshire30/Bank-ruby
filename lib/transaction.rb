@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative 'bank_account'
+require_relative 'account'
 
 # Handles deposits and withdrawels from bank account
-class Transaction
+class BankTransaction
   def make_a_withdrawal(account, amount)
     account.statement.unshift([Time.now.strftime('%d/%m/%y'), nil,
                                format('%.2f', amount), format('%.2f', amount)])

@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require './lib/bank.rb'
+require './lib/account.rb'
 
 RSpec.describe 'Feature - Viewing bank statement' do
-  subject { Bank.new }
+  subject { BankAccount.new }
   # As a user
   # So that I see my bank history
   # I would like to view my bank statement

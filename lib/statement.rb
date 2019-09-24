@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Logs requests to deposit and withdraw classes into an array
-class BankAccount
+class BankStatement
   attr_accessor :statement
 
   def initialize(statement = [])

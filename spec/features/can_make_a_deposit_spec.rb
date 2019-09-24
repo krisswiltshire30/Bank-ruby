@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require './lib/bank.rb'
+require './lib/account.rb'
 
 RSpec.describe 'Feature - Makeing a deposit' do
-  subject { Bank.new }
+  subject { BankAccount.new }
   # As a user
   # So that I can put money into my bank account
   # I would like to make a deposit

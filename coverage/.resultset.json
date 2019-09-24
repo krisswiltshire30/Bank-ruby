@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Kriss/Desktop/Ruby/projects/Bank-ruby/lib/bank.rb": [
+      "/Users/Kriss/Desktop/Ruby/projects/Bank-ruby/lib/account.rb": [
         null,
         null,
         1,
@@ -27,25 +27,6 @@
         1,
         6,
         6,
-        null,
-        null
-      ],
-      "/Users/Kriss/Desktop/Ruby/projects/Bank-ruby/lib/bank_account.rb": [
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        13,
-        null,
-        null,
-        1,
-        6,
-        6,
-        7,
-        null,
         null,
         null
       ],
@@ -75,6 +56,25 @@
         2,
         null,
         5,
+        null,
+        null,
+        null
+      ],
+      "/Users/Kriss/Desktop/Ruby/projects/Bank-ruby/lib/statement.rb": [
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        13,
+        null,
+        null,
+        1,
+        6,
+        6,
+        7,
         null,
         null,
         null
