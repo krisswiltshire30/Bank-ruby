@@ -14,12 +14,4 @@ class BankAccount
       puts line.join(' || ')
     end
   end
-
-  def balance_total(account)
-    if account.statement[0][1].nil?
-      account.statement[0][3] = format('%.2f', (account.statement[1][3].to_i - amount))
-    else
-      account.statement[0][3] = format('%.2f', (account.statement[1][3].to_i + amount))
-  end
-end
 end

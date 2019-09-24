@@ -34,6 +34,11 @@ RSpec.describe Transaction do
       expect { subject.make_a_withdrawal(bank_account, 5) }.to raise_error('Not enough funds')
     end
   end
+end
+RSpec.describe Transaction do
+  subject { Transaction.new }
+  let(:bank) { Bank.new }
+  let(:bank_account) { BankAccount.new }
 
   describe 'Deposit' do
     it 'Adds the date of deposit to bank statement' do
