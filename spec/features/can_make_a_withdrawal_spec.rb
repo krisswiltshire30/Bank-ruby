@@ -12,6 +12,6 @@ RSpec.describe 'Feature - Makeing a withdrawal' do
     subject.deposit(5000)
     subject.withdraw(1000)
     expect { subject.bank_statement }
-      .to output("date || credit || debit || balance\n13/09/19 ||  || 1000 || 4000\n13/09/19 || 5000 ||  || 5000\n").to_stdout
+      .to output("date || credit || debit || balance\n13/09/19 ||  || 1000.00 || 4000.00\n13/09/19 || 5000.00 ||  || 5000.00\n").to_stdout
   end
 end

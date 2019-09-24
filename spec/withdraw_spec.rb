@@ -21,13 +21,13 @@ RSpec.describe Withdraw do
   it 'Adds the withdraw amount to bank statement' do
     deposit.make_a_deposit(bank_account, 2000)
     subject.make_a_withdrawal(bank_account, 1000)
-    expect(bank_account.statement[0][2]).to eq(1000)
+    expect(bank_account.statement[0][2]).to eq('1000.00')
   end
 
   it 'Calculates the total balance' do
     deposit.make_a_deposit(bank_account, 1000)
     subject.make_a_withdrawal(bank_account, 1000)
-    expect(bank_account.statement[0][3]).to eq(0)
+    expect(bank_account.statement[0][3]).to eq('0.00')
   end
 
 end

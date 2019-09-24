@@ -17,13 +17,13 @@ RSpec.describe Deposit do
 
   it 'Adds the deposit amount bank statement' do
     subject.make_a_deposit(bank_account, 1000)
-    expect(bank_account.statement[0][1]).to eq(1000)
+    expect(bank_account.statement[0][1]).to eq('1000.00')
   end
 
   it 'Calculates the total balance' do
     subject.make_a_deposit(bank_account, 1000)
     subject.make_a_deposit(bank_account, 1000)
-    expect(bank_account.statement[0][3]).to eq(2000)
+    expect(bank_account.statement[0][3]).to eq('2000.00')
   end
 
 end
