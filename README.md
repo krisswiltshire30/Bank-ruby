@@ -13,6 +13,7 @@ A basic repl based bank account
 ### Process
 - I decided to split the acceptance criteria into smaller users stories and tackle from there. 
 - I then wrote some sudo code in IRB and settled on an array of arrays to handle that data.
+- I made this decision based on how easily iterating over an array of arrays fulfills the required look of the statement. 
 - The statement is handled by the bank account class by itterating over the arrays in reverse chronological order, it then puts out the array and joins with the table dividers '||'
 - The deposit and withdrawal class takes the account and amount as arguments and adds this information, as well as the date, as another array within the statement class
 - Both withdrawal and deposit class update the balance whenever a new array is added
@@ -27,6 +28,10 @@ $ git clone https://github.com/krisswiltshire30/Bank
 2. Install gems
 ```bash
 $ bundle install
+```
+3. Run tests
+```bash
+$ rspec
 ```
 
 *IRB Example*
