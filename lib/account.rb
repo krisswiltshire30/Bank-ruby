@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative 'account'
 require_relative 'transaction'
+require_relative 'statement'
 
 # Bank controller
 class BankAccount
@@ -14,7 +14,7 @@ class BankAccount
     @transaction.make_a_deposit(@statement, amount)
     "£#{amount} deposited into your to account"
   end
-  
+
   def withdraw(amount)
     @transaction.make_a_withdrawal(@statement, amount)
     "£#{amount} withdrawn from your account"

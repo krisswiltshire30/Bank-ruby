@@ -27,7 +27,11 @@ RSpec.describe BankTransaction do
       expect(statement.statement[0][3]).to eq('5.00')
     end
 
-    xit 'Should raise error if withdraw amount is more than balance' do
+    it 'Should raise error if trying to withdraw before depositing' do
+      expect { subject.make_a_withdrawal(statement, 5) }.to raise_error('Not enough funds')
+    end
+
+    it 'Should raise error if trying to withdraw more than current balance' do
       subject.make_a_deposit(statement, 1)
       expect { subject.make_a_withdrawal(statement, 5) }.to raise_error('Not enough funds')
     end
