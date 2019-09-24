@@ -2,15 +2,11 @@
 
 require_relative 'bank_account'
 
-# Handles withdrawels from bank account
+# Handles deposits and withdrawels from bank account
 class Transaction
   def make_a_withdrawal(account, amount)
-    raise 'Not enough funds' if (account.statement[0][3].to_i - amount).negative?
-
-    account.statement.unshift([Time.now.strftime('%d/%m/%y'),
-                               nil,
-                               format('%.2f', amount),
-                               format('%.2f', amount)])
+    account.statement.unshift([Time.now.strftime('%d/%m/%y'), nil,
+                               format('%.2f', amount), format('%.2f', amount)])
     account.statement[0][3] = format('%.2f', (account.statement[1][3].to_i - amount))
   end
 
