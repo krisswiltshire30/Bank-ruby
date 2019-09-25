@@ -9,10 +9,10 @@ A basic repl based bank account
 #### Tech used
 
 - Ruby
-- Rspec
-- Rubocop
-- SimpleCov
-- TimeCop
+- Rspec - Test framework
+- Rubocop - Linter
+- SimpleCov - Test coverage
+- TimeCop - Stubbing time
 
 ---
 
@@ -53,7 +53,7 @@ _IRB Example_
 
 ```ruby
 > require './lib/bank.rb'
-> bank = Bank.new
+> bank = BankAccount.new
 > bank.deposit(500)
 > bank.bank_statement
 > =>
@@ -162,16 +162,16 @@ date || credit || debit || balance
 
 ### Domain Model
 
-| Classes       | Methods           | Behaviour                                                                                                                                                                                                                                                                        |
-| ------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| _BankAccount_ | print_statement   | puts out all transactions                                                                                                                                                                                                                                                        |
-| _Transaction_ | make_a_deposit    | - Takes the account and amount as arguments and adds this information, as well as the date, as another array within the statement class. - Adds amount to the balance whenever a new array is added                                                                              |
-|               | make_a_withdrawal | - Takes the account and amount as arguments and adds this information, as well as the date, as another array within the statement class. - Subtracts the amount from the last balance whenever a new array is added. - _Edge Case_ - Should raise an error if insufficient funds |
-| _Bank_        |                   | Controller for all classes                                                                                                                                                                                                                                                       |
-|               | deposit           | Calls make_a_deposit                                                                                                                                                                                                                                                             |
-|               | withdraw          | Calls make_a_withdrawal                                                                                                                                                                                                                                                          |
-|               | bank_statement    | Calls print_statement                                                                                                                                                                                                                                                            |
+| Classes           | Methods           | Behaviour                                                                                                                                                                                                                                                                        |
+| ----------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| _BankStatement_   | print_statement   | puts out all transactions                                                                                                                                                                                                                                                        |
+| _BankTransaction_ | make_a_deposit    | - Takes the account and amount as arguments and adds this information, as well as the date, as another array within the statement class. - Adds amount to the balance whenever a new array is added                                                                              |
+|                   | make_a_withdrawal | - Takes the account and amount as arguments and adds this information, as well as the date, as another array within the statement class. - Subtracts the amount from the last balance whenever a new array is added. - _Edge Case_ - Should raise an error if insufficient funds |
+| _BankAccount_     |                   | Controller for all classes                                                                                                                                                                                                                                                       |
+|                   | deposit           | Calls make_a_deposit                                                                                                                                                                                                                                                             |
+|                   | withdraw          | Calls make_a_withdrawal                                                                                                                                                                                                                                                          |
+|                   | bank_statement    | Calls print_statement                                                                                                                                                                                                                                                            |
 
-### Possible edge cases
+### Edge cases
 
 - User should not be able to withdraw more than the current balance
