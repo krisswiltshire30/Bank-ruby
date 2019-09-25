@@ -13,5 +13,6 @@ class BankStatement
     @statement.each do |line|
       puts line.join(' || ')
     end
+    'Statement printed'
   end
 end

@@ -28,8 +28,6 @@ class BankTransaction
   end
 
   def amount_check(account, amount)
-    if account.statement.count < 1 || (account.statement[0][3].to_i - amount).negative?
-      raise 'Not enough funds'
-    end
+    raise 'Not enough funds' if account.statement.count < 1 || (account.statement[0][3].to_i - amount).negative?
   end
 end

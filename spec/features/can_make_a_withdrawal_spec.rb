@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# frozen_string_literal: false
 
 require './lib/account.rb'
 
@@ -11,7 +11,9 @@ RSpec.describe 'Feature - Makeing a withdrawal' do
   it 'Users can withdraw money out their account' do
     subject.deposit(5000)
     subject.withdraw(1000)
-    expect { subject.bank_statement }
-      .to output("date || credit || debit || balance\n13/09/19 ||  || 1000.00 || 4000.00\n13/09/19 || 5000.00 ||  || 5000.00\n").to_stdout
+    expected_output = "date || credit || debit || balance\n"
+    expected_output << "13/09/19 ||  || 1000.00 || 4000.00\n"
+    expected_output << "13/09/19 || 5000.00 ||  || 5000.00\n"
+    expect { subject.bank_statement }.to output(expected_output).to_stdout
   end
 end

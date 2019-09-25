@@ -5,9 +5,9 @@ require_relative 'statement'
 
 # Bank controller
 class BankAccount
-  def initialize
-    @statement = BankStatement.new
-    @transaction = BankTransaction.new
+  def initialize(statement = BankStatement, transaction = BankTransaction)
+    @statement = statement.new
+    @transaction = transaction.new
   end
 
   def deposit(amount)
@@ -22,6 +22,5 @@ class BankAccount
 
   def bank_statement
     @statement.print_statement
-    'Statement printed'
   end
 end
