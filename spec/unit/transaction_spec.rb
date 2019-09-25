@@ -2,8 +2,8 @@
 
 require './lib/transaction.rb'
 
-RSpec.describe BankTransaction do
-  let(:statement) { double(:BankStatement, statement: []) }
+RSpec.describe Transaction do
+  let(:statement) { double(:Statement, statement: []) }
 
   describe 'Withdraw' do
     it 'Adds the date of withdrawal to bank statement' do
@@ -27,8 +27,8 @@ RSpec.describe BankTransaction do
   end
 end
 
-RSpec.describe BankTransaction do
-  let(:statement) { double(:BankStatement, statement: []) }
+RSpec.describe Transaction do
+  let(:statement) { double(:Statement, statement: []) }
 
   describe 'Deposit' do
     it 'Adds the date of deposit to bank statement' do
@@ -50,8 +50,8 @@ RSpec.describe BankTransaction do
   end
 end
 
-RSpec.describe BankTransaction do
-  let(:statement) { double(:BankStatement, statement: []) }
+RSpec.describe Transaction do
+  let(:statement) { double(:Statement, statement: []) }
   describe 'Error handling' do
     it 'Should raise error if trying to withdraw before depositing' do
       subject.make_a_deposit(statement, 2)

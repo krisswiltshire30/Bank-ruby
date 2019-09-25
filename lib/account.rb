@@ -4,8 +4,8 @@ require_relative 'transaction'
 require_relative 'statement'
 
 # Bank controller
-class BankAccount
-  def initialize(statement = BankStatement, transaction = BankTransaction)
+class Account
+  def initialize(statement = Statement, transaction = Transaction)
     @statement = statement.new
     @transaction = transaction.new
   end

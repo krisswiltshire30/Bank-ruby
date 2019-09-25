@@ -3,7 +3,7 @@
 require './lib/account.rb'
 
 RSpec.describe 'Feature - Makeing a deposit' do
-  subject { BankAccount.new }
+  subject { Account.new }
   # As a user
   # So that I can put money into my bank account
   # I would like to make a deposit

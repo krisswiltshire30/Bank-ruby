@@ -2,7 +2,7 @@
 
 require './lib/account.rb'
 
-RSpec.describe BankAccount do
+RSpec.describe Account do
   describe 'Deposit' do
     it 'Should return a string containing how much has been deposited' do
       expect(subject.deposit(50)).to eq('£50 deposited into your to account')

@@ -3,7 +3,7 @@
 require_relative 'account'
 
 # Handles deposits and withdrawels from bank account
-class BankTransaction
+class Transaction
   def make_a_withdrawal(account, amount)
     amount_check(account, amount)
     account.statement.unshift([Time.now.strftime('%d/%m/%y'), nil,

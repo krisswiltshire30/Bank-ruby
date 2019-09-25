@@ -3,7 +3,7 @@
 require './lib/account.rb'
 
 RSpec.describe 'Feature - Makeing a withdrawal' do
-  subject { BankAccount.new }
+  subject { Account.new }
   # As a user
   # So that I can spend my money
   # I would like to withdraw money from my bank account
